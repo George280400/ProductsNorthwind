@@ -1,0 +1,21 @@
+{
+  "authenticationMethod": "route",
+  "welcomeFile": "/project2",
+
+  "routes": [
+    {
+      "source": "^/V2/Northwind/Northwind.svc/(.*)$",
+      "target": "$1",
+      "destination": "Nortwind",
+      "csrfProtection": true,
+      "authenticationType": "none"
+      
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}
