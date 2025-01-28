@@ -15,52 +15,52 @@
         </uxap:headerTitle>
         <uxap:headerContent>
             <layout:VerticalLayout id="_IDGenVerticalLayout1">
-                <Label id="labelUnits" text="Units in Stock" />
+                <Label id="labelUnits" text="Unidades en Stock" />
                 <ObjectAttribute id="attrUnits" text="{UnitsInStock}" />
             </layout:VerticalLayout>
             <layout:VerticalLayout id="_IDGenVerticalLayout2">
-                <Label id="labelOrder" text="Units on Order" />
+                <Label id="labelOrder" text="Unidades bajo pedido" />
                 <ObjectAttribute id="attrOrder" text="{UnitsOnOrder}" />
             </layout:VerticalLayout>
             <layout:VerticalLayout id="_IDGenVerticalLayout3">
-                <Label id="labelState" text="Discontinued" />
+                <Label id="labelState" text="Descontinuado" />
                 <ObjectAttribute id="attrState" text="{= ${discontinued} ? 'Yes' : 'No' }" />
             </layout:VerticalLayout>
         </uxap:headerContent>
         <uxap:sections>
-            <uxap:ObjectPageSection id="pageSectionSupplier" title="Supplier">
+            <uxap:ObjectPageSection id="pageSectionSupplier" title="Proveedor">
                 <uxap:subSections>
                     <uxap:ObjectPageSubSection id="subSectionInfo" title="">
                         <uxap:blocks>
                             <form:SimpleForm id="formInfo" title="Info" editable="false" layout="ResponsiveGridLayout">
                                 <form:content>
-                                    <Label id="labelCName" text="Company Name" />
+                                    <Label id="labelCName" text="Nombre de la compañia" />
                                     <Text id="textCName" text="{Supplier/CompanyName}" />
-                                    <Label id="labelWebsite" text="Website" />
+                                    <Label id="labelWebsite" text="Sitio Web" />
                                     <Link id="linkWebsite" text="{= ${Supplier/HomePage}.split('#')[0] }" href="{= ${Supplier/HomePage}.split('#')[1] }" target="_blank" />
                                 </form:content>
                             </form:SimpleForm>
-                            <form:SimpleForm id="formAddress" title="Address" editable="false" layout="ResponsiveGridLayout">
+                            <form:SimpleForm id="formAddress" title="Direccion" editable="false" layout="ResponsiveGridLayout">
                                 <form:content>
-                                    <Label id="labelStreet" text="Street" />
+                                    <Label id="labelStreet" text="Calle" />
                                     <Text id="textStreet" text="{Supplier/Address}" />
-                                    <Label id="labelCity" text="City" />
+                                    <Label id="labelCity" text="Ciudad" />
                                     <Text id="textCity" text="{Supplier/City}" />
                                     <Label id="labelRegion" text="Region" />
                                     <Text id="textRegion" text="{Supplier/Region}" />
-                                    <Label id="labelCountry" text="Country" />
+                                    <Label id="labelCountry" text="Pais" />
                                     <Text id="textCountry" text="{Supplier/Country}" />
-                                    <Label id="labelCode" text="Postal Code" />
+                                    <Label id="labelCode" text="Codigo Postal" />
                                     <Text id="textCode" text="{Supplier/PostalCode}" />
                                 </form:content>
                             </form:SimpleForm>
-                            <form:SimpleForm id="formContact" title="Contact" editable="false" layout="ResponsiveGridLayout">
+                            <form:SimpleForm id="formContact" title="Contacto" editable="false" layout="ResponsiveGridLayout">
                                 <form:content>
-                                    <Label id="labelTitle" text="Title" />
+                                    <Label id="labelTitle" text="Titulo" />
                                     <Text id="textTitle" text="{Supplier/ContactTitle}" />
-                                    <Label id="labelContactName" text="Name" />
+                                    <Label id="labelContactName" text="Nombre" />
                                     <Text id="textContactName" text="{Supplier/ContactName}" />
-                                    <Label id="labelPhone" text="Phone" />
+                                    <Label id="labelPhone" text="Telefono" />
                                     <Text id="textPhone" text="{Supplier/Phone}" />
                                     <Label id="labelFax" text="Fax" />
                                     <Text id="textFax" text="{Supplier/Fax}" />
@@ -70,17 +70,17 @@
                     </uxap:ObjectPageSubSection>
                 </uxap:subSections>
             </uxap:ObjectPageSection>
-            <uxap:ObjectPageSection id="pageSesctionCategory" title="Category">
+            <uxap:ObjectPageSection id="pageSesctionCategory" title="Categoria">
                 <uxap:subSections>
                     <uxap:ObjectPageSubSection id="subSectionCategory" title="">
                         <uxap:blocks>
                             <form:SimpleForm id="formCategory" editable="false" layout="ResponsiveGridLayout">
                                 <form:content>
-                                    <Label id="labelCategoryName" text="Name" />
+                                    <Label id="labelCategoryName" text="Nombre" />
                                     <Text id="textCategoryName" text="{Category/CategoryName}" />
-                                    <Label id="labelCategoryDescription" text="Description" />
+                                    <Label id="labelCategoryDescription" text="Descripcion" />
                                     <Text id="textCategoryDescription" text="{Category/Description}" />
-                                    <Label id="labelPicture" text="Picture" />
+                                    <Label id="labelPicture" text="Foto" />
                                     <Image id="imageCategory" src="{ path : 'Category/Picture', formatter : '.trimSuperfluousBytes' }" width="150px" height="150px" />
                                 </form:content>
                             </form:SimpleForm>

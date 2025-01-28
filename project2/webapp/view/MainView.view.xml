@@ -6,7 +6,7 @@
     xmlns:mvc="sap.ui.core.mvc">
     <Page id="Products">
         <smartFilterBar:SmartFilterBar id="smartFilterBar" persistencyKey="UniqueAndStablePersistencyKey" entitySet="Products" considerSelectionVariants="true" />
-        <smartList:SmartList id="smartProductList" smartFilter="smartFilterBar" entitySet="Products" expandFields="Category" header="Products List" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true">
+        <smartList:SmartList id="smartProductList" smartFilter="smartFilterBar" entitySet="Products" expandFields="Category" header="Lista de Productos" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true">
             <smartList:listItemTemplate>
                 <StandardListItem id="listTemplate" type="Navigation" press="handleListItemPress" title="{ProductName}" info="{= ${UnitPrice} + ' €' }" description="{Category/CategoryName}" />
             </smartList:listItemTemplate>

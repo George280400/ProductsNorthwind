@@ -47,7 +47,7 @@ sap.ui.define([
                 oButton.setIcon("sap-icon://unfavorite");
                 MessageToast.show("Removed from favorites");
             },
-            trimSuperfluousBytes: function (sVal) { // background info https://blogs.sap.com/2017/02/08/displaying-images-in-sapui5-received-from-the-northwind-odata-service/
+            trimSuperfluousBytes: function (sVal) { 
                 if (typeof sVal === "string") {
                     const sTrimmed = sVal.substring(104);
                     return "data:image/bmp;base64," + sTrimmed;
