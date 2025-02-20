@@ -4,12 +4,23 @@
     xmlns:smartList="sap.ui.comp.smartlist"
     xmlns:smartTable="sap.ui.comp.smarttable"
     xmlns:mvc="sap.ui.core.mvc">
-    <Page id="Products">
-        <smartFilterBar:SmartFilterBar id="smartFilterBar" persistencyKey="UniqueAndStablePersistencyKey" entitySet="Products" considerSelectionVariants="true" />
-        <smartList:SmartList id="smartProductList" smartFilter="smartFilterBar" entitySet="Products" expandFields="Category" header="Lista de Productos" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true">
-            <smartList:listItemTemplate>
-                <StandardListItem id="listTemplate" type="Navigation" press="handleListItemPress" title="{ProductName}" info="{= ${UnitPrice} + ' €' }" description="{Category/CategoryName}" />
-            </smartList:listItemTemplate>
-        </smartList:SmartList>
+    <Page id="Products" title="Lista de Productos">
+        
+        <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="Products">
+            <smartFilterBar:controlConfiguration>
+                <smartFilterBar:ControlConfiguration id="productName" visibleInAdvancedArea="true" label="Nombre Producto" key="ProductName" />
+                <smartFilterBar:ControlConfiguration id="productCategory" visibleInAdvancedArea="true" label="Categoria Producto" key="CategoryID"/>
+            </smartFilterBar:controlConfiguration>
+        </smartFilterBar:SmartFilterBar>
+        
+        <VBox>
+            <Button text="Exportar" press="onExportPress" icon="sap-icon://excel-attachment"/>
+            <smartList:SmartList id="smartProductList" smartFilter="smartFilterBar" entitySet="Products" expandFields="Category" header="Lista de Productos" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true">
+                <smartList:listItemTemplate>
+                    <StandardListItem id="listTemplate" type="Navigation" press="handleListItemPress" title="{ProductName}" info="{= ${UnitPrice} + ' €' }" description="{Category/CategoryName}" />
+                </smartList:listItemTemplate>
+            </smartList:SmartList>
+        </VBox>
     </Page>
 </mvc:View>
+

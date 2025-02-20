@@ -53,7 +53,13 @@ sap.ui.define([
                     return "data:image/bmp;base64," + sTrimmed;
                 }
                 return sVal;
+            },
+
+            onPrint: function () {
+                window.print();
             }
+            
+            
             
         });
     });

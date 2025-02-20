@@ -10,6 +10,7 @@
                 <uxap:actions>
                     <uxap:ObjectPageHeaderActionButton id="addToCart" icon="sap-icon://cart-4" press="addToCart" tooltip="Add to cart" />
                     <uxap:ObjectPageHeaderActionButton id="markAsFav" icon="sap-icon://unfavorite" press="markAsFav" tooltip="Mark as favorite" />
+                    <uxap:ObjectPageHeaderActionButton id="printButton" icon="sap-icon://print" press="onPrint" tooltip="Imprimir en PDF" />
                 </uxap:actions>
             </uxap:ObjectPageHeader>
         </uxap:headerTitle>
